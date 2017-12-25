@@ -27,7 +27,7 @@
 1. 最后 Enjoy it
 
     ```
-    sudo git clone https://github.com/JunJun-Love-Amber/digits-recognize-by-svc-service.git 
+    git clone https://github.com/JunJun-Love-Amber/digits-recognize-by-svc-service.git 
     cd digits-recognize-by-svc-service && sudo python3 main.py
     ```
 
