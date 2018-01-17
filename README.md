@@ -33,7 +33,7 @@
 
 # 接口
 
-## 1.获取结果 GET： ```/get/result/<uuid>```
+## 1.获取结果 GET： ```/getResult/<uuid>```
 
 **uuid 是调用上传图片后返回的标志**
 
