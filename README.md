@@ -62,19 +62,20 @@
 ```
 var request = require("request");
 
-var options = { method: 'POST',
-  url: 'http://127.0.0.1:80/savePicture',
-  headers: 
-   { 'postman-token': '173509cf-c706-b6f2-8cad-8e048743b3df',
-     'cache-control': 'no-cache',
-     'content-type': 'application/json' },
-  body: { picture: 'base64_encode(picture_data)' },
-  json: true };
+var options = { 
+    method: 'POST',
+    url: 'http://127.0.0.1:80/savePicture',
+    headers:  { 
+        'cache-control': 'no-cache',
+        'content-type': 'application/json' 
+    },
+    body: { picture: 'base64_encode(picture_data)' },
+    json: true 
+};
 
 request(options, function (error, response, body) {
-  if (error) throw new Error(error);
-
-  console.log(body);
+    if (error) throw new Error(error);
+    console.log(body);
 });
 
 ```
