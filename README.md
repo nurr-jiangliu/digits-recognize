@@ -20,7 +20,7 @@
 
 1. 安装好了后，你需要执行 ``` redis-server --port 6379 &```    启动 redis，若需要其他IP/端口，请修改 ```main.py``` 相应代码
 
-1. 其次，您还需要安装 opencv sklearn scipy numpy 
+1. 其次，您还需要安装 opencv-python sklearn scipy numpy  pillow redis flask flask_cors
 
 1. 更重要的是，你需要 python3.6
 
