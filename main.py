@@ -7,13 +7,15 @@ from io import BytesIO
 from threading import Thread
 
 from flask import Flask, Response, jsonify, request
+from flask_cors import CORS
+
 from PIL import Image
 from redis import Redis
 
 import amber
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/')
 def hello():
@@ -46,8 +48,9 @@ def savePicture():
 @app.route('/getResult/<uuid>', methods=['GET'])
 def getResult(uuid):
     data = jsonlib.loads(redis.get(uuid))
-    if data['code'] == 200:
-        redis.delete(uuid)
+    if data['code'] == 200:        
+        # redis.delete(uuid)
+        pass
     return jsonify(data)
 
 
