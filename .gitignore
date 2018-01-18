@@ -1,2 +1,3 @@
 .vscode
-./amber/__pycache__
+svm-server-venv
+amber/__pycache__

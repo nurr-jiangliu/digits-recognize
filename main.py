@@ -7,13 +7,15 @@ from io import BytesIO
 from threading import Thread
 
 from flask import Flask, Response, jsonify, request
+from flask_cors import CORS
+
 from PIL import Image
 from redis import Redis
 
 import amber
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/')
 def hello():
@@ -29,8 +31,8 @@ def savePicture():
     hashsss = hashlib.md5()
     hashsss.update(data['picture'].encode("utf8"))
     # 展示图片
-    im = Image.open(BytesIO(base64lib.b64decode(data['picture'])))
-    im.show()
+    # im = Image.open(BytesIO(base64lib.b64decode(data['picture'])))
+    # im.show()
 
     uuid = hashsss.hexdigest()
 
@@ -46,8 +48,9 @@ def savePicture():
 @app.route('/getResult/<uuid>', methods=['GET'])
 def getResult(uuid):
     data = jsonlib.loads(redis.get(uuid))
-    if data['code'] == 200:
-        redis.delete(uuid)
+    if data['code'] == 200:        
+        # redis.delete(uuid)
+        pass
     return jsonify(data)
 
 
@@ -56,4 +59,4 @@ if __name__ == '__main__':
     print("redis:" + str(redis.ping()))
     svm = amber.svm.SVM(redis)
     Thread(target=svm.predict).start()
-    app.run(host="0.0.0.0", port=80, debug=False, threaded=True)
+    app.run(host="0.0.0.0", port=8080, debug=False, threaded=True)
