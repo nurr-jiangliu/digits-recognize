@@ -29,8 +29,8 @@ def savePicture():
     hashsss = hashlib.md5()
     hashsss.update(data['picture'].encode("utf8"))
     # 展示图片
-    im = Image.open(BytesIO(base64lib.b64decode(data['picture'])))
-    im.show()
+    # im = Image.open(BytesIO(base64lib.b64decode(data['picture'])))
+    # im.show()
 
     uuid = hashsss.hexdigest()
 
