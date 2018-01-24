@@ -1,6 +1,10 @@
 # digits-recognize-by-svc-service
 入门级实验，使用sklearn做的手写数字识别服务
 
+[SVM 小实验](http://loveamber.me/svm "SVM 小实验")
+
+![](https://junjun-love-amber.github.io/digits-recognize-by-svc-service/doc/example-01.jpg)
+![](https://junjun-love-amber.github.io/digits-recognize-by-svc-service/doc/example-02.jpg)
 
 # 预备
  
