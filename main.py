@@ -1,3 +1,4 @@
+#encoding:utf-8
 import base64 as base64lib
 import hashlib
 import json as jsonlib
