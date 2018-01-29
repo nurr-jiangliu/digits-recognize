@@ -1,3 +1,4 @@
 .vscode
 svm-server-venv
 amber/__pycache__
+*.pyc
