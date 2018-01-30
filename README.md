@@ -3,8 +3,8 @@
 
 [SVM 小实验](http://loveamber.me/svm "SVM 小实验")
 
-![](https://junjun-love-amber.github.io/digits-recognize-by-svc-service/doc/example-01.jpg)
-![](https://junjun-love-amber.github.io/digits-recognize-by-svc-service/doc/example-02.jpg)
+![](https://junjun-love-amber.github.io/digits-recognize/doc/example-01.jpg)
+![](https://junjun-love-amber.github.io/digits-recognize/doc/example-02.jpg)
 
 # 预备
  
