@@ -29,7 +29,7 @@ def norm(name, l_input, lsize=4):
 
 
 class AlexNet:
-    def __init__(self):
+    def __init__(self, redis = None):
         self.initOK = False
         self.redis = redis
 
