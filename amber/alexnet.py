@@ -93,6 +93,8 @@ class AlexNet:
 
         # 占位符输入
         tf_x, tf_y, tf_dropout, _, _ = self.init()
+        # 构建模型
+        predict = self.alexnet()
         # 恢复模型 so easy
         with tf.Session() as sess:
             saver = tf.train.Saver()
@@ -121,7 +123,7 @@ class AlexNet:
                     print('')
                 print('')
 
-                predict_num = sess.run(tf.argmax(tf_y, 1), feed_dict={tf_x: picture_reshape})
+                predict_num = sess.run(tf.argmax(predict, 1), feed_dict={tf_x: picture_reshape})
                 json = jsonlib.dumps({"code": 200, "message": "识别结果：{}（数据集小，不对不要打我/(ㄒoㄒ)/~~）".format(predict_num[0])})
                 self.redis.set(uuid, json)
 
