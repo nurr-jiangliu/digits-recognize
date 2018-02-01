@@ -1,5 +1,5 @@
 .vscode
-svm-server-venv
+venv
 amber/__pycache__
 *.pyc
 .data*
