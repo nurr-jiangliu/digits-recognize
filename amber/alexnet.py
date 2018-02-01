@@ -66,7 +66,7 @@ class AlexNet:
                     # accuracy, loss = self.calc_accuracy(session, mnist.test.images[:256], mnist.test.labels[:256])
                     print("Accuracy =  " + "{:.5f}".format(accuracy) + "  Loss = " + "{:.6f}".format(loss))
                 step += 1
-            saver = tf.train.Saver(dict(self.weights,**self.biases))
+            saver = tf.train.Saver(dict(self.weights, **self.biases))
             saver.save(session, './models/alexnet/')
             print("Optimization Finished!")
 
@@ -90,7 +90,8 @@ class AlexNet:
 
     # For Redis
     def predict(self):
-
+        if self.redis == None:
+            raise (RuntimeError("No Redis"))
         # 占位符输入
         tf_x, tf_y, tf_dropout, _, _ = self.init()
         # 构建模型
