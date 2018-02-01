@@ -2,3 +2,4 @@
 svm-server-venv
 amber/__pycache__
 *.pyc
+.data*
