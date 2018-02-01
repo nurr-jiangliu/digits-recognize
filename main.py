@@ -62,4 +62,4 @@ if __name__ == '__main__':
     # Thread(target=svm.predict).start()
     softmax = amber.softmax.SoftMax(redis)
     Thread(target=softmax.predict).start()
-    app.run(host="0.0.0.0", port=8080, debug=False, threaded=True)
+    app.run(host="0.0.0.0", port=8888, debug=False, threaded=True)

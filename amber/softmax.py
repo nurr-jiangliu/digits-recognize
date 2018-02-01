@@ -40,7 +40,7 @@ class SoftMax:
                 sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
             saver = tf.train.Saver()
-            saver.save(sess, './models/mnist_softmax.model')
+            saver.save(sess, './models/softmax/')
 
     def test(self, dir="./train"):
         print("测试模型...")
@@ -52,7 +52,7 @@ class SoftMax:
         # 恢复模型 so easy
         with tf.Session() as sess:
             saver = tf.train.Saver()
-            saver.restore(sess, "./models/mnist_softmax.model")
+            saver.restore(sess, "./models/softmax/")
             success_rate = sess.run(
                 accuracy,
                 feed_dict={
@@ -69,7 +69,7 @@ class SoftMax:
         # 恢复模型 so easy
         with tf.Session() as sess:
             saver = tf.train.Saver()
-            saver.restore(sess, "./models/mnist_softmax.model")
+            saver.restore(sess, "./models/softmax/")
             while True:
                 json = self.redis.brpop('pictures')
                 data = jsonlib.loads(json[1])
