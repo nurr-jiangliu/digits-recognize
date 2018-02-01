@@ -56,7 +56,7 @@ def getResult(uuid):
 
 
 if __name__ == '__main__':
-    redis = Redis(host='127.0.0.1', port=6379, db=0)
+    redis = Redis(host='loveamber.me', port=6379, db=0)
     print("redis:" + str(redis.ping()))
     # svm = amber.svm.SVM(redis)
     # Thread(target=svm.predict).start()
