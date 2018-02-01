@@ -1,7 +1,7 @@
 # digits-recognize-by-svc-service
 入门级实验，使用sklearn做的手写数字识别服务
 
-[mnist 小实验](http://loveamber.me/mnist "mnist 小实验")
+[MNIS 小实验](http://loveamber.me/mnist "mnist 小实验")
 
 ![](https://junjun-love-amber.github.io/digits-recognize/doc/example-01.jpg)
 ![](https://junjun-love-amber.github.io/digits-recognize/doc/example-02.jpg)
