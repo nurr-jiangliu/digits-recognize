@@ -208,7 +208,7 @@ class AlexNet:
         dense2 = tf.nn.dropout(dense2, dropout)
 
         # 网络输出层
-        out = tf.matmul(dense2, weights['out']) + biases['out']
+        out = tf.matmul(dense2, weights['wout']) + biases['bout']
         return out
 
 
