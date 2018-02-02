@@ -29,7 +29,7 @@ def norm(name, l_input, lsize=4):
 
 
 class AlexNet:
-    def __init__(self, redis = None):
+    def __init__(self, redis=None):
         self.initOK = False
         self.redis = redis
 
@@ -124,7 +124,7 @@ class AlexNet:
                     print('')
                 print('')
 
-                predict_num = sess.run(tf.argmax(predict, 1), feed_dict={tf_x: picture_reshape})
+                predict_num = sess.run(tf.argmax(predict, 1), feed_dict={tf_x: picture_reshape, tf_dropout: 1.})
                 json = jsonlib.dumps({"code": 200, "message": "识别结果：{}（数据集小，不对不要打我/(ㄒoㄒ)/~~）".format(predict_num[0])})
                 self.redis.set(uuid, json)
 
